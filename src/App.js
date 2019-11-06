@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
+import {Helloworld} from './Helloworld'
 
-class App extends Component {
+class App extends React.Component {
 
   constructor() {
     super()
@@ -78,6 +79,7 @@ class App extends Component {
   render() {
     return (
       <div id="game">
+        <Helloworld />
         <div id="status">{this.state.winnerLine}</div>
         <div id="head">
           TicTacToe
