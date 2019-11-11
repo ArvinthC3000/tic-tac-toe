@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react';                    // import React,{ Component } from 'react';
 import './App.css';
 import {Helloworld} from './Helloworld'
 
-class App extends React.Component {
+class App extends React.Component {           // class App extends React {
 
   constructor() {
     super()
@@ -16,6 +16,8 @@ class App extends React.Component {
       totalMoves: 0
     }
   }
+
+
 
   clicked(event) {
 
@@ -76,6 +78,12 @@ class App extends React.Component {
     }
   }
 
+  replay(event){
+    
+    this.gameState.board = '';
+    console.log("clicked")
+  }
+
   render() {
     return (
       <div id="game">
@@ -94,6 +102,9 @@ class App extends React.Component {
           <div className="square" data-square="6"></div>
           <div className="square" data-square="7"></div>
           <div className="square" data-square="8"></div>
+        </div>
+        <div id="replay">
+          {/* <button type="button" onClick={this.replay()}>Replay</button> */}
         </div>
       </div>
     );
